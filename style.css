@@ -233,6 +233,28 @@ section {
     color: var(--white);
 }
 
+@media (max-width: 480px) {
+    .header .container {
+        height: 60px;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text span:first-child {
+        font-size: 0.9rem;
+    }
+    
+    .logo-text span:last-child {
+        font-size: 1rem;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 1.3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav {
         display: none;
@@ -2474,5 +2496,169 @@ section {
     
     .legal-links {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-title .subtitle {
+        font-size: 0.5em;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .cta-buttons {
+        margin-top: 20px;
+        gap: 10px;
+    }
+    
+    .btn-hero {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .booking-form-container {
+        padding: 15px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .step-title {
+        font-size: 0.7rem;
+    }
+    
+    .step-line {
+        top: 15px;
+    }
+    
+    .hotel-option {
+        flex-direction: column;
+    }
+    
+    .hotel-image {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .room-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-input, .btn {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-tabs {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .gallery-tab {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .main-gallery {
+        height: 250px;
+    }
+    
+    .thumbnails-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .thumbnail {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card-header {
+        padding: 15px;
+    }
+    
+    .contact-tab {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .contact-form-container {
+        padding: 15px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .map-controls {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .section-title::after {
+        width: 50px;
+        height: 3px;
+        margin-top: 10px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        margin-bottom: 30px;
+    }
+    
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 }
