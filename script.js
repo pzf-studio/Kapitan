@@ -1172,3 +1172,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // ... существующий код ...
     initInteractiveContacts();
 });
+
+// Инициализация мобильного меню
+function initMobileMenu() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const closeMenuBtn = document.querySelector('.close-menu-btn');
+    const mobileMenu = document.querySelector('.nav-mobile');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+    
+    closeMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Закрытие меню при клике на ссылку
+    const mobileLinks = document.querySelectorAll('.nav-mobile-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Адаптация индикатора навигации для мобильных устройств
+    if (window.innerWidth <= 768) {
+        const navIndicator = document.querySelector('.nav-indicator');
+        if (navIndicator) navIndicator.style.display = 'none';
+    }
+}
+
+// Добавьте вызов функции в DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileMenu();
+    // ... остальной код инициализации ...
+});

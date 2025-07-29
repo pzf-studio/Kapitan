@@ -2109,23 +2109,134 @@ section {
 
 /* ==================== АДАПТИВНОСТЬ ==================== */
 @media (max-width: 1200px) {
-    .hero-title {
-        font-size: 3.8rem;
+    .container {
+        max-width: 100%;
+        padding: 0 30px;
     }
 }
 
 @media (max-width: 992px) {
-    .hero-title {
-        font-size: 3.2rem;
+    /* Шапка для планшетов */
+    .nav-links {
+        gap: 20px;
     }
-    .rooms-grid {
+    
+    /* Герой */
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    /* Бронирование */
+    .booking-container {
         grid-template-columns: 1fr;
+    }
+    
+    .booking-benefits {
+        position: static;
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 768px) {
-    .section {
+    /* Общие стили */
+    section {
         padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    /* Шапка */
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .logo-text span:first-child {
+        font-size: 1rem;
+    }
+    
+    .logo-text span:last-child {
+        font-size: 1.2rem;
+    }
+    
+    /* Мобильное меню */
+    .nav-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(30, 41, 59, 0.98);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.5s ease;
+        padding: 80px 20px 40px;
+    }
+    
+    .nav-mobile.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .nav-mobile-links {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .nav-mobile-links a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--white);
+        padding: 12px 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .nav-mobile-links a:hover {
+        background: rgba(59, 130, 246, 0.2);
+        color: var(--blue-400);
+    }
+    
+    .nav-mobile-links .btn {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .close-menu-btn {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.8rem;
+        color: var(--white);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .close-menu-btn:hover {
+        color: var(--blue-400);
+        transform: rotate(90deg);
+    }
+    
+    /* Герой */
+    .hero {
+        min-height: 600px;
     }
     
     .hero-title {
@@ -2136,122 +2247,31 @@ section {
         font-size: 1.2rem;
     }
     
-    .nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--gray-800);
+    .cta-buttons {
         flex-direction: column;
-        padding: 20px 0;
+        align-items: center;
         gap: 15px;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav.active {
-        display: flex;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .booking-card,
-    .contacts-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .pagination-dots {
-        bottom: 20px;
-    }
-    
-    .hero-scroll-hint {
-        bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
     }
     
     .btn-hero {
-        padding: 12px 30px;
-        font-size: 0.9rem;
-    }
-    
-    .logo-text span:first-child {
-        font-size: 1.5rem;
-    }
-    
-    .logo-text span:last-child {
-        font-size: 1.3rem;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .legal-links {
+        width: 100%;
+        max-width: 280px;
         justify-content: center;
     }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        min-height: 500px;
+    
+    /* Бронирование */
+    .booking-steps {
+        flex-wrap: wrap;
+        gap: 15px;
     }
     
-    .hero-title {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-    
-    .hero-title .subtitle {
-        font-size: 0.5em;
-        letter-spacing: 1px;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .cta-buttons {
-        margin-top: 20px;
-        gap: 10px;
-    }
-    
-    .btn-hero {
-        padding: 10px 20px;
-        font-size: 0.8rem;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .booking-form-container {
-        padding: 15px;
-    }
-    
-    .step-number {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-    }
-    
-    .step-title {
-        font-size: 0.7rem;
+    .step-indicator {
+        flex: 1;
+        min-width: 100px;
     }
     
     .step-line {
-        top: 15px;
+        display: none;
     }
     
     .hotel-option {
@@ -2260,192 +2280,82 @@ section {
     
     .hotel-image {
         width: 100%;
-        height: 120px;
+        height: 200px;
     }
     
-    .room-options {
+    .date-selection {
         grid-template-columns: 1fr;
     }
     
-    .form-input, .btn {
-        padding: 10px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-tabs {
-        flex-wrap: wrap;
-        justify-content: flex-start;
+    /* Отели */
+    .hotel-card {
+        padding: 20px;
     }
     
-    .gallery-tab {
-        padding: 8px 15px;
-        font-size: 0.8rem;
+    /* Галерея */
+    .gallery-tabs {
+        flex-wrap: wrap;
     }
     
     .main-gallery {
-        height: 250px;
+        height: 350px;
     }
     
     .thumbnails-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
-    .thumbnail {
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-card-header {
-        padding: 15px;
-    }
-    
-    .contact-tab {
-        padding: 8px;
-        font-size: 0.8rem;
-    }
-    
-    .contact-item {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .contact-form-container {
-        padding: 15px;
+    /* Контакты */
+    .contacts-grid {
+        grid-template-columns: 1fr;
     }
     
     .form-row {
         grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    
-    .map-controls {
-        flex-direction: column;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    /* Общие стили */
+    .container {
+        padding: 0 15px;
+    }
+    
     section {
         padding: 50px 0;
     }
     
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 40px;
+    /* Герой */
+    .hero-title {
+        font-size: 2rem;
     }
     
-    .section-title::after {
-        width: 50px;
-        height: 3px;
-        margin-top: 10px;
+    .hero-subtitle {
+        font-size: 1rem;
     }
     
+    /* Преимущества */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Отели */
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Подвал */
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .footer-col {
-        margin-bottom: 30px;
-    }
-    
-    .footer-col:last-child {
-        margin-bottom: 0;
     }
     
     .footer-bottom {
         flex-direction: column;
         text-align: center;
-        gap: 10px;
     }
     
     .legal-links {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        line-height: 1.3;
-    }
-}
-
-@media (max-width: 768px) {
-    #particle-canvas {
-        display: none;
-    }
-    
-    .slide {
-        transition: opacity 0.5s ease;
-    }
-}
-
-@media (max-width: 480px) {
-    .header .container {
-        height: 60px;
-    }
-    
-    .logo-img {
-        height: 40px;
-    }
-    
-    .logo-text span:first-child {
-        font-size: 0.9rem;
-    }
-    
-    .logo-text span:last-child {
-        font-size: 1rem;
-    }
-    
-    .mobile-menu-btn {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--gray-800);
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 15px;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav.active {
-        display: flex;
-    }
-    
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 20px;
-    }
-    
-    .nav-links a {
-        padding: 12px 20px;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .logo-text span:first-child {
-        font-size: 1rem;
-    }
-    
-    .logo-text span:last-child {
-        font-size: 1.2rem;
+        flex-wrap: wrap;
     }
 }
