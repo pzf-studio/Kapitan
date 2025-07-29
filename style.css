@@ -233,68 +233,9 @@ section {
     color: var(--white);
 }
 
-@media (max-width: 480px) {
-    .header .container {
-        height: 60px;
-    }
-    
-    .logo-img {
-        height: 40px;
-    }
-    
-    .logo-text span:first-child {
-        font-size: 0.9rem;
-    }
-    
-    .logo-text span:last-child {
-        font-size: 1rem;
-    }
-    
-    .mobile-menu-btn {
-        font-size: 1.3rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--gray-800);
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 15px;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav.active {
-        display: flex;
-    }
-    
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 20px;
-    }
-    
-    .nav-links a {
-        padding: 12px 20px;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .logo-text span:first-child {
-        font-size: 1rem;
-    }
-    
-    .logo-text span:last-child {
-        font-size: 1.2rem;
-    }
-}
+
+
 
 /* ==================== HERO СЕКЦИЯ ==================== */
 .hero {
@@ -563,54 +504,7 @@ section {
     100% { transform: translateY(30px); opacity: 0; }
 }
 
-/* Адаптивность */
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.3rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-    
-    .hero-title .subtitle {
-        font-size: 0.65em;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-title .subtitle {
-        font-size: 0.6em;
-        letter-spacing: 1px;
-    }
-    
-    .hero-scroll-hint {
-        bottom: 20px;
-    }
-    
-    .pagination-dots {
-        bottom: 20px;
-    }
-}
 
 /* ==================== СЕКЦИЯ БРОНИРОВАНИЯ ==================== */
 #booking {
@@ -1285,55 +1179,6 @@ section {
     display: block;
 }
 
-/* Адаптивность */
-@media (max-width: 992px) {
-    .booking-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .booking-benefits {
-        position: static;
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hotel-option {
-        flex-direction: column;
-    }
-    
-    .hotel-image {
-        width: 100%;
-        height: 150px;
-    }
-    
-    .date-selection {
-        grid-template-columns: 1fr;
-    }
-    
-    .summary-card {
-        flex-direction: column;
-    }
-    
-    .summary-image {
-        width: 100%;
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .booking-form-container {
-        padding: 20px;
-    }
-    
-    .step-title {
-        font-size: 0.8rem;
-    }
-    
-    .room-options {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ==================== ОБНОВЛЕННАЯ СЕКЦИЯ ПРЕИМУЩЕСТВ ==================== */
 #advantages {
@@ -1456,35 +1301,6 @@ section {
     margin-bottom: 0;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .advantages-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-    
-    .advantage-card {
-        padding: 30px 20px;
-    }
-    
-    .advantage-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .advantages-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-subtitle {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-}
 
 /* ==================== ОБНОВЛЕННАЯ СЕКЦИЯ ОТЕЛЕЙ ==================== */
 /* Стили для секции отелей */
@@ -1614,19 +1430,6 @@ section {
     border-bottom: 3px solid #DC143C
 }
 
-@media (max-width: 768px) {
-    .hotel-card {
-        padding: 20px;
-    }
-    
-    .hotel-header h3 {
-        font-size: 1.5rem;
-    }
-    
-    .rooms-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ==================== ГАЛЕРЕЯ ==================== */
 /* Галерея */
@@ -1811,43 +1614,6 @@ section {
     line-height: 1.6;
 }
 
-@media (max-width: 992px) {
-    .thumbnails-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .main-gallery {
-        height: 400px;
-    }
-}
-
-@media (max-width: 768px) {
-    .thumbnails-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .main-gallery {
-        height: 350px;
-    }
-    
-    .gallery-tabs {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 576px) {
-    .thumbnails-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .main-gallery {
-        height: 300px;
-    }
-    
-    .gallery-content {
-        padding: 20px;
-    }
-}
 /* ==================== ПЕРЕРАБОТАННАЯ СЕКЦИЯ КОНТАКТОВ ==================== */
 #contacts {
     background-color: var(--gray-800);
@@ -2147,40 +1913,7 @@ section {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Адаптивность */
-@media (max-width: 992px) {
-    .contacts-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-map-container {
-        height: 400px;
-    }
-}
 
-@media (max-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-form-container {
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-card-header {
-        padding: 20px 15px 10px;
-    }
-    
-    .contact-card-body {
-        padding: 20px 15px;
-    }
-    
-    .map-controls {
-        flex-direction: column;
-    }
-}
 
 /* ==================== ПОДВАЛ ==================== */
 .footer {
@@ -2343,35 +2076,6 @@ section {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .legal-links {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-col {
-        margin-bottom: 30px;
-    }
-    
-    .footer-col:last-child {
-        margin-bottom: 0;
-    }
-}
 
 /* ==================== АНИМАЦИИ В СИНИХ ТОНАХ ==================== */
 @keyframes headerAppear {
@@ -2680,5 +2384,68 @@ section {
     
     .slide {
         transition: opacity 0.5s ease;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .container {
+        height: 60px;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text span:first-child {
+        font-size: 0.9rem;
+    }
+    
+    .logo-text span:last-child {
+        font-size: 1rem;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--gray-800);
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+    }
+    
+    .nav-links a {
+        padding: 12px 20px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .logo-text span:first-child {
+        font-size: 1rem;
+    }
+    
+    .logo-text span:last-child {
+        font-size: 1.2rem;
     }
 }
